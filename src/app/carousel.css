@@ -1,0 +1,40 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+}
+
+.carousel-wrapper {
+  display: flex;
+}
+
+.slide {
+  flex: 1 0 100%;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.slide:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
