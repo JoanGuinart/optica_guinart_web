@@ -55,23 +55,37 @@ export default function Navbar() {
       {/* Enlaces */}
       <ul className="hidden md:flex space-x-4">
         <li>
-          <Link href="/ulleres">
+          <Link href="/gafas">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Ulleres
+              Gafas
             </span>
           </Link>
         </li>
         <li>
-          <Link href="/serveis">
+          <Link href="/lentillas">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Serveis
+              Lentillas
             </span>
           </Link>
         </li>
         <li>
-          <Link href="/contacte">
+          <Link href="/audifonos">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Contacte
+              Audífonos
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/servicios">
+            <span className="hover:text-gray-400 transition duration-300 text-xl">
+              Servcios
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contacto">
+            <span className="hover:text-gray-400 transition duration-300 text-xl">
+              Contacto
             </span>
           </Link>
         </li>
@@ -144,7 +158,7 @@ export default function Navbar() {
       <div
         ref={menuRef}
         className={`${
-          isMenuOpen ? "top-full border-t-2" : "top-[-210%] -z-20"
+          isMenuOpen ? "top-full border-t-2" : "top-[-290%] -z-20"
         } md:hidden border-[#9ad3c6] absolute z-[-1] left-0 w-full bg-[#A2DED0] text-white transition-all duration-300`}
       >
         <ul
@@ -153,23 +167,37 @@ export default function Navbar() {
           } flex flex-col items-center space-y-6 pt-4 pb-6 transition-all`}
         >
           <li>
-            <Link href="/ulleres" onClick={toggleMenu}>
+            <Link href="/gafas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Ulleres
+                Gafas
               </span>
             </Link>
           </li>
           <li>
-            <Link href="/serveis" onClick={toggleMenu}>
+            <Link href="/lentillas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Serveis
+                Lentillas
               </span>
             </Link>
           </li>
           <li>
-            <Link href="/contacte" onClick={toggleMenu}>
+            <Link href="/audifonos" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Contacte
+                Audífonos
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/servicios" onClick={toggleMenu}>
+              <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
+                Servicios
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacto" onClick={toggleMenu}>
+              <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
+                Contacto
               </span>
             </Link>
           </li>

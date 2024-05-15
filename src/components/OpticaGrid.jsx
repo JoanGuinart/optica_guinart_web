@@ -5,9 +5,10 @@ import filtroLuzAzul from "../img/gafas-filtro-luz.webp";
 import lentillas from "../img/lentillas-oferta-2.jpg";
 import lentillasCosmeticas from "../img/lentillas-cosmeticas.jpeg";
 import audifonos from "../img/audifonos.jpg";
-import testAuditivo from "../img/test-auditivo.jpg"
-import examenVisual from "../img/examen-visual.jpg"
+import testAuditivo from "../img/test-auditivo.jpg";
+import examenVisual from "../img/examen-visual.jpg";
 import presionOcular from "../img/presion-ocular.webp";
+import Link from "next/link";
 
 const categories = [
   {
@@ -16,6 +17,7 @@ const categories = [
     title: "Gafas Graduadas",
     description:
       "Encuentra una amplia selección de gafas graduadas de las mejores marcas.",
+    href: "/gafas",
   },
   {
     image: chicoGafasSol,
@@ -23,6 +25,7 @@ const categories = [
     title: "Gafas de Sol",
     description:
       "Protege tus ojos del sol con nuestras gafas de sol de última moda.",
+    href: "/gafas",
   },
   {
     image: filtroLuzAzul,
@@ -30,6 +33,7 @@ const categories = [
     title: "Gafas con Filtro de Luz Azul",
     description:
       "Reduce la fatiga visual con nuestras gafas que filtran la luz azul.",
+    href: "/gafas",
   },
   {
     image: lentillas,
@@ -37,6 +41,7 @@ const categories = [
     title: "Lentillas",
     description:
       "Descubre nuestras lentillas de calidad para una visión cómoda y nítida.",
+    href: "/lentillas",
   },
   {
     image: lentillasCosmeticas,
@@ -44,6 +49,7 @@ const categories = [
     title: "Lentillas Cosméticas",
     description:
       "Agrega un toque de color a tus ojos con nuestras lentillas cosméticas.",
+    href: "/lentillas",
   },
   {
     image: audifonos,
@@ -51,12 +57,14 @@ const categories = [
     title: "Audífonos",
     description:
       "Mejora tu audición con nuestros audífonos de alta tecnología.",
+    href: "/audifonos",
   },
   {
     image: testAuditivo,
     alt: "Test Auditivo",
     title: "Test Auditivo",
     description: "Realiza un examen auditivo completo con nuestros expertos.",
+    href: "/servicios",
   },
   {
     image: examenVisual,
@@ -64,6 +72,7 @@ const categories = [
     title: "Test Ocular",
     description:
       "Obtén un diagnóstico preciso de tu visión con nuestros test oculares de última generación.",
+    href: "/servicios",
   },
   {
     image: presionOcular,
@@ -71,6 +80,7 @@ const categories = [
     title: "Test de Presión Ocular",
     description:
       "Mide la presión intraocular para prevenir enfermedades oculares.",
+    href: "/servicios",
   },
 ];
 
@@ -78,18 +88,20 @@ const OpticaGrid = () => {
   return (
     <div className="flex flex-wrap justify-center gap-8 mt-10">
       {categories.map((category, index) => (
-        <div className="max-w-xs" key={index}>
-          <div style={{ aspectRatio: "3/2", overflow: "hidden" }}>
-            <Image
-              className="h-full w-full rounded-md"
-              src={category.image}
-              alt={category.alt}
-              objectFit="cover"
-            />
+        <Link href={category.href} key={index}>
+          <div className="max-w-xs">
+            <div style={{ aspectRatio: "3/2", overflow: "hidden" }}>
+              <Image
+                className="h-full w-full rounded-md"
+                src={category.image}
+                alt={category.alt}
+                objectFit="cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold mt-4">{category.title}</h3>
+            <p className="mt-2 text-gray-700">{category.description}</p>
           </div>
-          <h3 className="text-xl font-bold mt-4">{category.title}</h3>
-          <p className="mt-2 text-gray-700">{category.description}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );
