@@ -9,12 +9,12 @@
   display: flex;
 }
 
-.slide {
+.slide-home {
   flex: 1 0 100%;
   transition: opacity 0.7s ease-in-out;
 }
 
-.slide:not(.active) {
+.slide-home:not(.active) {
   opacity: 0;
   pointer-events: none;
 }
@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    height: 15px
   }
   
   .dot {

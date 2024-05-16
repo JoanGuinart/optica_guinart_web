@@ -5,7 +5,7 @@ import "../app/carousel.css";
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
-  const [direction, setDirection] = useState(null); // Estado para almacenar la dirección de desplazamiento
+  const [direction, setDirection] = useState(null); 
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, 6000);
@@ -28,10 +28,10 @@ const Carousel = ({ items }) => {
     const differenceX = touchStartX - touchEndX;
 
     if (differenceX > 5) {
-      setDirection("next"); // Establecer la dirección como Next
+      setDirection("next"); 
       goToNextSlide();
     } else if (differenceX < -5) {
-      setDirection("prev"); // Establecer la dirección como Prev
+      setDirection("prev"); 
       goToPrevSlide();
     }
 
@@ -70,7 +70,7 @@ const Carousel = ({ items }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`slide ${index === currentIndex ? "active" : ""}`}
+            className={`slide-home ${index === currentIndex ? "active" : ""}`}
           >
             {item}
           </div>

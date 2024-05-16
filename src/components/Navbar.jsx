@@ -181,7 +181,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/audifonos" onClick={toggleMenu}>
+            <Link href="/gafas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
                 Audífonos
               </span>

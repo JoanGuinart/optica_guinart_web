@@ -26,32 +26,4 @@ const OfertaProgresivos = () => {
     </div>
   );
 };
-/* 
- <div className="bg-[#aae1e8] h-80 w-full flex flex-row justify-around items-center relative">
-      <div className="flex flex-col gap-10 lg:text-2xl text-lg justify-center items-center text-center uppercase pl-20 text-teal-600 z-10">
-        <div className="flex lg:w-full font-semibold">
-          <span className="hidden lg:block">Sin compromisos</span>
-          <span className="lg:static absolute top-5 left-3">
-            un mes de lentillas
-          </span>
-        </div>
-        <div>
-          <span className="p-3 w-fit text-center lg:text-8xl text-6xl font-extrabold rounded-md lg:mt-3 lg:static absolute top-10 left-3">
-            gratis
-          </span>
-        </div>
-        <span className="lg:text-base text-xs lg:static right-1/2 absolute bottom-0">
-          Lentillas diarias desde menos de 1€ al día
-        </span>
-      </div>
-      <div className="flex items-center">
-        <Image
-          src={Lentillas}
-          alt="antireflejante"
-          className="lg:h-80 h-full w-full lg:static absolute left-0 lg:w-auto object-cover"
-        />
-      </div>
-    </div>
-*/
-
 export default OfertaProgresivos;

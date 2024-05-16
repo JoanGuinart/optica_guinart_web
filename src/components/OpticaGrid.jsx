@@ -92,10 +92,10 @@ const OpticaGrid = () => {
           <div className="max-w-xs">
             <div style={{ aspectRatio: "3/2", overflow: "hidden" }}>
               <Image
-                className="h-full w-full rounded-md"
+                className="h-full w-full rounded-md object-cover"
                 src={category.image}
                 alt={category.alt}
-                objectFit="cover"
+                
               />
             </div>
             <h3 className="text-xl font-bold mt-4">{category.title}</h3>

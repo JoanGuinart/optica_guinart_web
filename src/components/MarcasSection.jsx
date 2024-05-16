@@ -12,31 +12,30 @@ import police from "../img/police.svg";
 import vogue from "../img/vogue.svg";
 import carolinaHerrera from "../img/carolina-herrera.svg";
 
-const marcas = [
-  { nombre: "Silhouette", imagen: silhouette },
-  { nombre: "Ray-Ban", imagen: rayban },
-  { nombre: "Polo Ralph Lauren", imagen: poloRalphLauren },
-  { nombre: "Lacoste", imagen: lacoste },
-  { nombre: "Tous", imagen: tous },
-  { nombre: "Police", imagen: police },
-  { nombre: "Furla", imagen: furla },
-  { nombre: "Vogue", imagen: vogue },
-  { nombre: "Carolina Herrera", imagen: carolinaHerrera },
-  { nombre: "Moschino Ochitali", imagen: moschinno },
-  /* Repetimos para hacer efecto infinito */
-  { nombre: "Silhouette", imagen: silhouette },
-  { nombre: "Ray-Ban", imagen: rayban },
-  { nombre: "Polo Ralph Lauren", imagen: poloRalphLauren },
-  { nombre: "Lacoste", imagen: lacoste },
-  { nombre: "Tous", imagen: tous },
-  { nombre: "Police", imagen: police },
-  { nombre: "Furla", imagen: furla },
-  { nombre: "Vogue", imagen: vogue },
-  { nombre: "Carolina Herrera", imagen: carolinaHerrera },
-  { nombre: "Moschino Ochitali", imagen: moschinno },
-];
-
 const MarcasSection = () => {
+  const marcas = [
+    { nombre: "Silhouette", imagen: silhouette },
+    { nombre: "Ray-Ban", imagen: rayban },
+    { nombre: "Polo Ralph Lauren", imagen: poloRalphLauren },
+    { nombre: "Lacoste", imagen: lacoste },
+    { nombre: "Tous", imagen: tous },
+    { nombre: "Police", imagen: police },
+    { nombre: "Furla", imagen: furla },
+    { nombre: "Vogue", imagen: vogue },
+    { nombre: "Carolina Herrera", imagen: carolinaHerrera },
+    { nombre: "Moschino Ochitali", imagen: moschinno },
+    /* Repetimos para hacer efecto infinito */
+    { nombre: "Silhouette", imagen: silhouette },
+    { nombre: "Ray-Ban", imagen: rayban },
+    { nombre: "Polo Ralph Lauren", imagen: poloRalphLauren },
+    { nombre: "Lacoste", imagen: lacoste },
+    { nombre: "Tous", imagen: tous },
+    { nombre: "Police", imagen: police },
+    { nombre: "Furla", imagen: furla },
+    { nombre: "Vogue", imagen: vogue },
+    { nombre: "Carolina Herrera", imagen: carolinaHerrera },
+    { nombre: "Moschino Ochitali", imagen: moschinno },
+  ];
   return (
     <div className="slider">
       <div

@@ -1,7 +1,9 @@
 import GafasSolComponentSection from "@/components/GafasSolComponentSection";
 import GafasGraduadasComponentSection from "@/components/GafasGraduadasComponentSection";
 import OpinionesGoogle from "@/components/OpinionesGoogle";
-import MarcasSection from "@/components/MarcasSection";
+import dynamic from "next/dynamic";
+
+const MarcasSection = dynamic(() => import("@/components/MarcasSection"), { ssr: false });
 
 const Ulleres = () => {
   return (

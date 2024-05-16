@@ -24,7 +24,6 @@ const GafasSolComponentSection = () => {
         <Image
           src={image}
           alt="image"
-          objectFit="cover"
           className="max-h-[450px] object-cover lg:rounded-lg"
         />
       </div>

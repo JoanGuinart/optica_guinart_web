@@ -6,7 +6,7 @@ const GafasSolComponentSection = () => {
   return (
     <div className="flex lg:flex-row flex-col">
       <div className="lg:w-4/6 w-100">
-        <Image src={image} alt="image" objectFit="cover" className="max-h-[450px] object-cover lg:rounded-br-xl" />
+        <Image src={image} alt="image" className="max-h-[450px] object-cover lg:rounded-br-xl" />
       </div>
       <div className="lg:w-2/6 w-100 p-5 text-justify">
         <h2 className="text-2xl font-bold text-center">Gafas de sol</h2>
