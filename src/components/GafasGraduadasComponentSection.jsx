@@ -24,8 +24,8 @@ const GafasSolComponentSection = () => {
       </div>
       <div className="lg:w-4/6 w-100 order-1 lg:order-2">
         <RevealWrapper
-          mobile={false}
-          origin="right"
+/*           mobile={false}
+ */          origin="right"
           distance="500px"
           reset={true}
         >

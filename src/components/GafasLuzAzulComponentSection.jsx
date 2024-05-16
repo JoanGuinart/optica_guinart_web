@@ -9,8 +9,8 @@ const GafasLuzAzulComponentSection = () => {
     <div className="flex lg:flex-row flex-col">
       <div className="lg:w-4/6 w-100">
         <RevealWrapper
-          mobile={false}
-          origin="left"
+/*           mobile={false}
+ */          origin="left"
           distance="500px"
           reset={true}
         >
