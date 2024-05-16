@@ -135,7 +135,7 @@ export default function Navbar() {
       </div>
 
       {/* Burger Icon for Mobile */}
-      <div className="block md:hidden">
+      <div className="flex md:hidden">
         <button onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,7 @@ const MarcasSection = dynamic(() => import("@/components/MarcasSection"), {
 
 const Ulleres = () => {
   return (
-    <div className="flex min-h-screen flex-col py-20 bg-[#f1fffc] text-black">
+    <div className="flex flex-col py-20 bg-[#f1fffc] text-black">
       <GafasSolComponentSection />
       <GafasGraduadasComponentSection />
       <MarcasSection />

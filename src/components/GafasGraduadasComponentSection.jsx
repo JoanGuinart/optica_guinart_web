@@ -23,12 +23,7 @@ const GafasSolComponentSection = () => {
         </p>
       </div>
       <div className="lg:w-4/6 w-100 order-1 lg:order-2">
-        <RevealWrapper
-/*           mobile={false}
- */          origin="right"
-          distance="500px"
-          reset={true}
-        >
+        <RevealWrapper origin="bottom" distance="500px">
           <Image
             src={image}
             alt="image"
