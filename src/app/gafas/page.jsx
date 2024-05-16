@@ -2,8 +2,11 @@ import GafasSolComponentSection from "@/components/GafasSolComponentSection";
 import GafasGraduadasComponentSection from "@/components/GafasGraduadasComponentSection";
 import OpinionesGoogle from "@/components/OpinionesGoogle";
 import dynamic from "next/dynamic";
+import GafasLuzAzulComponentSection from "@/components/GafasLuzAzulComponentSection";
 
-const MarcasSection = dynamic(() => import("@/components/MarcasSection"), { ssr: false });
+const MarcasSection = dynamic(() => import("@/components/MarcasSection"), {
+  ssr: false,
+});
 
 const Ulleres = () => {
   return (
@@ -11,6 +14,7 @@ const Ulleres = () => {
       <GafasSolComponentSection />
       <GafasGraduadasComponentSection />
       <MarcasSection />
+      <GafasLuzAzulComponentSection />
       <OpinionesGoogle />
     </div>
   );

@@ -214,8 +214,8 @@ export default function Navbar() {
                 className="hover:invert-[42%] transition duration-300 pt-[1px]"
                 src={GoogleMapsIcon}
                 alt="LocationDot-icon"
-                width={12}
-                height={12}
+                width={18}
+                height={18}
               />
             </a>
             <a
@@ -227,8 +227,8 @@ export default function Navbar() {
                 className="hover:invert-[42%] transition duration-300"
                 src={Instagram}
                 alt="Instagram-icon"
-                width={15}
-                height={15}
+                width={21}
+                height={21}
               />
             </a>
             <a
@@ -240,8 +240,8 @@ export default function Navbar() {
                 className="hover:invert-[42%] transition duration-300"
                 src={Whatsapp}
                 alt="Whatsapp-icon"
-                width={15}
-                height={15}
+                width={21}
+                height={21}
               />
             </a>
           </div>

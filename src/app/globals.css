@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 }
+
+//transition efect on scroll
+
+.animate-slideRight {
+  animation: slideRight 2s ease-out;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}

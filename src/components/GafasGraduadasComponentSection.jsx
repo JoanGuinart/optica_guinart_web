@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import image from "../img/gafas-graduadas-hombre.jpg";
+import { RevealWrapper } from "next-reveal";
 
 const GafasSolComponentSection = () => {
   return (
@@ -21,11 +23,18 @@ const GafasSolComponentSection = () => {
         </p>
       </div>
       <div className="lg:w-4/6 w-100 order-1 lg:order-2">
-        <Image
-          src={image}
-          alt="image"
-          className="max-h-[450px] object-cover lg:rounded-lg"
-        />
+        <RevealWrapper
+          mobile={false}
+          origin="right"
+          distance="500px"
+          reset={true}
+        >
+          <Image
+            src={image}
+            alt="image"
+            className="max-h-[450px] object-cover lg:rounded-lg"
+          />
+        </RevealWrapper>
       </div>
     </div>
   );
