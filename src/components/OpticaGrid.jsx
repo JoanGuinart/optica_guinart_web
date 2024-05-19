@@ -86,7 +86,7 @@ const categories = [
 
 const OpticaGrid = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-8 mt-10">
+    <div className="flex flex-wrap justify-center gap-8 mt-10 mb-10">
       {categories.map((category, index) => (
         <Link href={category.href} key={index}>
           <div className="max-w-xs">
