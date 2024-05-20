@@ -1,8 +1,11 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Montserrat({
+  weight: ['200','400','700'],
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "Optica Guinart",
@@ -12,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navbar/>
         <div className="children -z-10">
         {children}

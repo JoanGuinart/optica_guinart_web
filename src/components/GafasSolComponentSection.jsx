@@ -27,8 +27,8 @@ const GafasSolComponentSection = () => {
           garantizados!
           <br />
           <br />
-          Encontrarás el estilo perfecto para destacar. ¡Haz una declaración de
-          moda y protege tus ojos con nosotros hoy mismo!
+          ¡Haz una declaración de moda y protege tus ojos con nosotros hoy
+          mismo!
         </p>
       </div>
     </div>
