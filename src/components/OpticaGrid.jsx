@@ -14,56 +14,56 @@ const categories = [
   {
     image: chicaGafasGraduadas,
     alt: "Gafas Graduadas",
-    title: "Gafas Graduadas",
+    title: "Ulleres graduades",
     description:
-      "Encuentra una amplia selección de gafas graduadas de las mejores marcas.",
+      "Troba una àmplia selecció d'ulleres graduades de les millors marques.",
     href: "/gafas",
   },
   {
     image: chicoGafasSol,
     alt: "Gafas de Sol",
-    title: "Gafas de Sol",
+    title: "Ulleres de Sol",
     description:
-      "Protege tus ojos del sol con nuestras gafas de sol de última moda.",
+      "Protegeix els teus ulls del sol amb les nostres ulleres de sol d'última moda.",
     href: "/gafas",
   },
   {
     image: filtroLuzAzul,
     alt: "Gafas con Filtro de Luz Azul",
-    title: "Gafas con Filtro de Luz Azul",
+    title: "Ulleres amb filtre blau",
     description:
-      "Reduce la fatiga visual con nuestras gafas que filtran la luz azul.",
+      "Redueix la fatiga visual amb les nostres ulleres que filtren la llum blava.",
     href: "/gafas",
   },
   {
     image: lentillas,
     alt: "Lentillas",
-    title: "Lentillas",
+    title: "Lentilles",
     description:
-      "Descubre nuestras lentillas de calidad para una visión cómoda y nítida.",
+      "Descobreix les nostres lents de contacte de qualitat per a una visió còmoda i nítida.",
     href: "/lentillas",
   },
   {
     image: lentillasCosmeticas,
     alt: "Lentillas Cosméticas",
-    title: "Lentillas Cosméticas",
+    title: "Lentilles Cosmètiques",
     description:
-      "Agrega un toque de color a tus ojos con nuestras lentillas cosméticas.",
+      "Afegeix un toc de color als teus ulls amb les nostres lents de contacte cosmètiques.",
     href: "/lentillas",
   },
   {
     image: audifonos,
     alt: "Audífonos",
-    title: "Audífonos",
+    title: "Audiòfons",
     description:
-      "Mejora tu audición con nuestros audífonos de alta tecnología.",
+      "Millora la teva audició amb els nostres audiòfons d'alta tecnologia.",
     href: "/audifonos",
   },
   {
     image: testAuditivo,
     alt: "Test Auditivo",
-    title: "Test Auditivo",
-    description: "Realiza un examen auditivo completo con nuestros expertos.",
+    title: "Test Auditiu",
+    description: "Realitza un examen auditiu complet amb els nostres experts.",
     href: "/servicios",
   },
   {
@@ -71,15 +71,15 @@ const categories = [
     alt: "Test Ocular",
     title: "Test Ocular",
     description:
-      "Obtén un diagnóstico preciso de tu visión con nuestros test oculares de última generación.",
+      "Obtingues un diagnòstic precís de la teva visió amb els nostres test oculars d'última generació.",
     href: "/servicios",
   },
   {
     image: presionOcular,
     alt: "Test de Presión Ocular",
-    title: "Test de Presión Ocular",
+    title: "Test de Presió Ocular",
     description:
-      "Mide la presión intraocular para prevenir enfermedades oculares.",
+      "Mesura la pressió intraocular per prevenir malalties oculars.",
     href: "/servicios",
   },
 ];
@@ -95,7 +95,6 @@ const OpticaGrid = () => {
                 className="h-full w-full rounded-md object-cover"
                 src={category.image}
                 alt={category.alt}
-                
               />
             </div>
             <h3 className="text-xl font-bold mt-4">{category.title}</h3>

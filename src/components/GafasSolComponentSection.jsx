@@ -17,18 +17,18 @@ const GafasSolComponentSection = () => {
         </RevealWrapper>
       </div>
       <div className="lg:w-2/6 w-100 p-5 text-justify">
-        <h2 className="text-2xl font-bold text-center">Gafas de sol</h2>
+        <h2 className="text-2xl font-bold text-center">Ulleres de sol</h2>
         <br />
         <p className="lg:text-2xl text-xl font-light">
-          ¡Descubre el paraíso de las gafas de sol en Optica Guinart!
+          ¡Descobreix el paradís de les ulleres de sol a Optica Guinart!
           <br />
           <br />
-          Con las mejores marcas, últimas tendencias y los precios más bajos
-          garantizados!
+          Amb les millors marques, últimes tendéncies i els millors preus
+          garantits!
           <br />
           <br />
-          ¡Haz una declaración de moda y protege tus ojos con nosotros hoy
-          mismo!
+          ¡Fes una declaració de moda i protegeix els teus ulls amb nosaltres
+          avui mateix!
         </p>
       </div>
     </div>

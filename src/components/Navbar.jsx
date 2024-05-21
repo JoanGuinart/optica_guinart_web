@@ -40,7 +40,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed z-10 w-full flex justify-between items-center py-4 px-6 bg-[#A2DED0] text-white">
+    <nav className="fixed z-10 w-full flex justify-between items-center py-4 px-6 bg-[#A2DED0] lg:bg-[#a2ded0da] text-white">
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/">
@@ -53,39 +53,39 @@ export default function Navbar() {
       </div>
 
       {/* Enlaces */}
-      <ul className="hidden md:flex space-x-4">
+      <ul className="hidden md:flex space-x-4 font-semibold">
         <li>
           <Link href="/gafas">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Gafas
+              Ulleres
             </span>
           </Link>
         </li>
         <li>
           <Link href="/lentillas">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Lentillas
+              Lentilles
             </span>
           </Link>
         </li>
         <li>
           <Link href="/audifonos">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Audífonos
+              Audiòfons
             </span>
           </Link>
         </li>
         <li>
           <Link href="/servicios">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Servcios
+              Serveis
             </span>
           </Link>
         </li>
         <li>
           <Link href="/contacto">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
-              Contacto
+              Contacte
             </span>
           </Link>
         </li>
@@ -169,35 +169,35 @@ export default function Navbar() {
           <li>
             <Link href="/gafas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Gafas
+                Ulleres
               </span>
             </Link>
           </li>
           <li>
             <Link href="/lentillas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Lentillas
+                Lentilles
               </span>
             </Link>
           </li>
           <li>
             <Link href="/gafas" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Audífonos
+                Audiòfons
               </span>
             </Link>
           </li>
           <li>
             <Link href="/servicios" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Servicios
+                Serveis
               </span>
             </Link>
           </li>
           <li>
             <Link href="/contacto" onClick={toggleMenu}>
               <span className="text-[#405752] active:text-[#5f736f] text-2xl tracking-widest font-semibold">
-                Contacto
+                Contacte
               </span>
             </Link>
           </li>
@@ -247,7 +247,7 @@ export default function Navbar() {
           </div>
         </ul>
         <div
-          className="bg-[#A2DED0] h-6 w-full absolute -bottom-4 left-0"
+          className="bg-[#a2ded0e2] h-6 w-full absolute -bottom-4 left-0"
           style={{
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%)",
           }}

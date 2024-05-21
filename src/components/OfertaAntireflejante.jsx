@@ -7,7 +7,7 @@ const OfertaAntireflejante = () => {
     <div className="bg-[#fab9c1] h-80 w-full flex justify-between items-center">
       <div className="flex flex-col gap-10 lg:text-3xl text-xl justify-center items-center text-center uppercase pl-20 text-[#411418] z-10">
         <div className="flex lg:w-full font-extrabold md:static absolute right-1 top-5">
-          <span>Montura <br /><span className="text-5xl">+</span><br /> Lentes <br className="md:hidden"/> antirreflejantes</span>
+          <span>Montura <br /><span className="text-5xl">+</span><br /> Lents <br className="md:hidden"/> antirreflexants</span>
         </div>
         <div>
           <span className="p-3 w-fit text-center md:text-8xl text-6xl font-extrabold rounded-md md:mt-3 md:static absolute right-3">

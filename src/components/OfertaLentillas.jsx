@@ -7,9 +7,9 @@ const OfertaLentillas = () => {
     <div className="bg-[#aae1e8] h-80 w-full flex flex-row justify-around items-center relative">
       <div className="flex flex-col gap-10 lg:text-2xl text-lg justify-center items-center text-center uppercase pl-20 text-teal-700 z-10">
         <div className="flex flex-col justify-center lg:w-full font-semibold">
-          <span className="hidden lg:flex text-start">Sin compromisos</span>
+          <span className="hidden lg:flex text-start">Sense compromisos</span>
           <span className="lg:static lg:left-0 text-start absolute top-8 left-3">
-            primer mes de lentillas
+            primer mes de lentilles
           </span>
         </div>
         <div>
@@ -18,7 +18,7 @@ const OfertaLentillas = () => {
           </span>
         </div>
         <span className="lg:text-base text-xs lg:static right-1/2 absolute bottom-0">
-          Lentillas diarias desde menos de 1€ al día
+          Lentilles diaries desde menys de 1€ al dia
         </span>
       </div>
       <div className="flex items-center">

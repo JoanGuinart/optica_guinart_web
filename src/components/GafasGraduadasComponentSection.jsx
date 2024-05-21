@@ -8,17 +8,17 @@ const GafasSolComponentSection = () => {
   return (
     <div className="flex lg:flex-row flex-col mt-5">
       <div className="lg:w-2/6 w-100 p-5 text-justify order-2 lg:order-1">
-        <h2 className="text-2xl font-bold text-center">Gafas graduadas</h2>
+        <h2 className="text-2xl font-bold text-center">Ulleres graduades</h2>
         <br />
         <p className="lg:text-2xl text-xl font-light">
-          ¡Vive con claridad y estilo en Optica Guinart!
+          ¡Viu amb claredat i estil a Optica Guinart!
           <br />
           <br />
-          Descubre nuestras gafas graduadas, donde la moda se une con la visión
-          perfecta. Con las últimas tendencias y la mejor calidad
+          Descobreix les nostres ulleres graduades, on la moda s'uneix amb la visió perfecte
+          Amb les últimes tendències i la millor qualitat!
           <br />
           <br />
-          ¡Ve más allá de la visión con nosotros hoy mismo!
+          ¡Ves més enllà de la visió amb nosaltres avui mateix!
         </p>
       </div>
       <div className="lg:w-4/6 w-100 order-1 lg:order-2">
