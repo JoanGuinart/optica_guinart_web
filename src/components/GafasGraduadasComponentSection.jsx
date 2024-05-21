@@ -15,7 +15,7 @@ const GafasSolComponentSection = () => {
           ¡Viu amb claredat i estil a Optica Guinart!
           <br />
           <br />
-          Descobreix les nostres ulleres graduades, on la moda s'uneix amb la visió perfecte
+          Descobreix les nostres ulleres graduades, on la moda s&apos;uneix amb la visió perfecte
           Amb les últimes tendències i la millor qualitat!
           <br />
           <br />
