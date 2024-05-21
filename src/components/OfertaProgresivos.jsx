@@ -15,7 +15,7 @@ const OfertaProgresivos = () => {
       <div className="flex flex-col gap-10 text-2xl justify-center items-center text-center uppercase pl-20 text-yellow-950 z-10">
         <div className="flex flex-col w-full font-extrabold">
           <span className="md:block hidden">¡Duplica el teu estil, sense cost adicional! </span>
-          <span className="md:static absolute top-20 right-3">progressius<br className="sm:hidden"/> d'alta gama</span>
+          <span className="md:static absolute top-20 right-3">progressius<br className="sm:hidden"/> d&apos;alta gama</span>
         </div>
         <div>
           <span className="p-3 w-fit text-center lg:text-8xl text-6xl font-extrabold rounded-md lg:mt-3 lg:static absolute bottom-10 right-5">
