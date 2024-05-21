@@ -16,7 +16,7 @@ const categories = [
     alt: "Gafas Graduadas",
     title: "Ulleres graduades",
     description:
-      "Troba una àmplia selecció d'ulleres graduades de les millors marques.",
+      `Troba una àmplia selecció d'ulleres graduades de les millors marques.`,
     href: "/gafas",
   },
   {
@@ -24,7 +24,7 @@ const categories = [
     alt: "Gafas de Sol",
     title: "Ulleres de Sol",
     description:
-      "Protegeix els teus ulls del sol amb les nostres ulleres de sol d'última moda.",
+      `Protegeix els teus ulls del sol amb les nostres ulleres de sol d'última moda.`,
     href: "/gafas",
   },
   {
@@ -56,7 +56,7 @@ const categories = [
     alt: "Audífonos",
     title: "Audiòfons",
     description:
-      "Millora la teva audició amb els nostres audiòfons d'alta tecnologia.",
+      `Millora la teva audició amb els nostres audiòfons d'alta tecnologia.`,
     href: "/audifonos",
   },
   {
@@ -71,7 +71,7 @@ const categories = [
     alt: "Test Ocular",
     title: "Test Ocular",
     description:
-      "Obtingues un diagnòstic precís de la teva visió amb els nostres test oculars d'última generació.",
+      `Obtingues un diagnòstic precís de la teva visió amb els nostres test oculars d'última generació.`,
     href: "/servicios",
   },
   {

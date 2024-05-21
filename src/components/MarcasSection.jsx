@@ -54,7 +54,7 @@ const MarcasSection = () => {
         />
       </a>
       <p className="text-center text-lg text-black lg:ml-3">
-        Demana'ns la marca, model i color que vulguis!
+        Demanens la marca, model i color que vulguis!
       </p>
     </div>
       <div className="slider">
