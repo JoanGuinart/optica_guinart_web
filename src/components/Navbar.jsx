@@ -53,7 +53,7 @@ export default function Navbar() {
       </div>
 
       {/* Enlaces */}
-      <ul className="hidden md:flex space-x-4 font-semibold">
+      <ul className="hidden lg:flex space-x-4 font-semibold">
         <li>
           <Link href="/gafas">
             <span className="hover:text-gray-400 transition duration-300 text-xl">
@@ -92,7 +92,7 @@ export default function Navbar() {
       </ul>
 
       {/* Iconos */}
-      <div className="hidden md:flex space-x-4">
+      <div className="hidden lg:flex space-x-4">
         <a
           href="https://www.google.com/maps/dir//C%2F+Gran+de+Sant+Andreu,+308,+Sant+Andreu,+08030+Barcelona/@41.4370855,2.1072775,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4bcdc240241cf:0xa4b5922d46c1e48d!2m2!1d2.1896783!2d41.4371149?entry=ttu"
           target="_blank"
@@ -135,7 +135,7 @@ export default function Navbar() {
       </div>
 
       {/* Burger Icon for Mobile */}
-      <div className="flex md:hidden">
+      <div className="flex lg:hidden">
         <button onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           isMenuOpen ? "top-full border-t-2" : "top-[-290%] -z-20"
-        } md:hidden border-[#9ad3c6] absolute z-[-1] left-0 w-full bg-[#A2DED0] text-white transition-all duration-300`}
+        } lg:hidden border-[#9ad3c6] absolute z-[-1] left-0 w-full bg-[#A2DED0] text-white transition-all duration-300`}
       >
         <ul
           className={`${
@@ -203,7 +203,7 @@ export default function Navbar() {
           </li>
           {/* Iconos */}
           <div
-            className={`${isMenuOpen ? "flex md:hidden space-x-6" : "hidden"}`}
+            className={`${isMenuOpen ? "flex lg:hidden space-x-6" : "hidden"}`}
           >
             <a
               href="https://www.google.com/maps/dir//C%2F+Gran+de+Sant+Andreu,+308,+Sant+Andreu,+08030+Barcelona/@41.4370855,2.1072775,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4bcdc240241cf:0xa4b5922d46c1e48d!2m2!1d2.1896783!2d41.4371149?entry=ttu"

@@ -10,12 +10,17 @@ const roboto = Montserrat({
 export const metadata = {
   title: "Optica Guinart",
   description: "Optica Guinart Sant Andreu",
+  icons: {
+    icon: ['/favicon.ico']
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       <link rel="icon" href="./favicon.ico" sizes="any" />
+      <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={roboto.className}>
         <Navbar/>
         <div className="children -z-10">
