@@ -10,7 +10,7 @@ import lentillaCosmetica from "../img/lentilla-cosmetica.jpg"
 export const LentillasGrid = () => {
   return (
     <div className='w-full flex justify-center mt-20'>
-        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8 w-full px-40 text-center">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8 w-full lg:px-40 px-3 text-center">
             <div className="h-96">
               <Image className='w-full h-full object-cover rounded-md hover:scale-95' src={lentillaGraduadaUno} alt='lentilla' />
               <span>Lentilles Diaries</span>
