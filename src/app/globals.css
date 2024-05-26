@@ -48,3 +48,18 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* @media only screen and (max-width: 1024px){
+  .customMask{
+    mask-image: linear-gradient(
+      #cbd9c7 90%,
+      transparent
+    );
+  }
+} */
+.customMaskTwo {
+  mask-image: linear-gradient(
+    rgb(226 232 240) 80%,
+    transparent
+  )
+}
