@@ -1,11 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 import Audifono from '../img/audifono_1.jpg'
-import lentillaGraduadaDos from '../img/lentilla-grduada-2.jpeg'
-import lentillaGraduadaTres from '../img/lentilla-graduada-3.webp'
-import lentillaGraduadaCuatro from '../img/lentillas-progresivas.png'
-import lentillaColor from '../img/lentilla-color.jpg'
-import lentillaCosmetica from '../img/lentilla-cosmetica.jpg'
 
 export const AudiofonosGrid = () => {
 	return (
