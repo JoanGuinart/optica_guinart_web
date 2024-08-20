@@ -1,6 +1,5 @@
 import { LentillasGrid } from '@/components/LentillasGrid'
 import { LentillasHeader } from '@/components/LentillasHeader'
-import Lorem from '@/helpers/Lorem'
 import React from 'react'
 
 const page = () => {

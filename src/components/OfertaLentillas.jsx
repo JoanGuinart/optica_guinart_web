@@ -1,5 +1,5 @@
 import React from "react";
-import Lentillas from "../img/lentillas-oferta-3.jpg";
+import Lentillas from "../img/lentilla-ilustracio.png";
 import Image from "next/image";
 
 const OfertaLentillas = () => {
