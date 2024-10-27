@@ -1,21 +1,22 @@
 ---
 import Construccion from "../components/Construccion.astro";
 
-const currentUrl = new URL(Astro.request.url).hostname;
+// Determinar si estamos en producción
+const isProduction = import.meta.env.MODE === "production";
 
-let showFullContent;
+// Determinar si la URL es localhost
+const isLocalhost = new URL(Astro.request.url).hostname === "localhost";
 
-if (currentUrl === "localhost") {
-  showFullContent = true;
-} else if (
-  currentUrl === "opticaguinart.com" ||
-  currentUrl === "opticaguinart.es"
-) {
-  showFullContent = false;
+// Lógica condicional para determinar qué contenido mostrar
+let content;
+
+if (isProduction) {
+  content = <Construccion />;
+} else if (isLocalhost) {
+  content = <h1>Ready - Trabajando en Localhost</h1>;
 } else {
-  showFullContent = true;
+  content = <h1>Bienvenido a nuestra página en producción</h1>; // Esto es opcional
 }
-console.log(showFullContent);
 ---
 
 <!doctype html>
@@ -26,10 +27,10 @@ console.log(showFullContent);
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="src\styles\reset.css" />
+    <link rel="stylesheet" href="src/styles/reset.css" />
     <title>Optica Guinart</title>
   </head>
   <body>
-    <Construccion />
+    {content} <!-- Aquí se renderiza el contenido basado en la lógica -->
   </body>
 </html>
