@@ -1,0 +1,34 @@
+---
+import Construccion from "../components/Construccion.astro";
+
+const currentUrl = new URL(Astro.request.url).hostname;
+
+let showFullContent;
+
+if (currentUrl === "localhost") {
+  showFullContent = true;
+} else if (
+  currentUrl === "opticaguinart.com" ||
+  currentUrl === "opticaguinart.es"
+) {
+  showFullContent = false;
+} else {
+  showFullContent = true;
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <title>Optica Guinart</title>
+  </head>
+  <body>
+    {showFullContent ? <slot /> : <Construccion />}
+  </body>
+</html>
