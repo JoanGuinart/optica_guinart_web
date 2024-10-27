@@ -11,11 +11,11 @@ const isLocalhost = new URL(Astro.request.url).hostname === "localhost";
 let content;
 
 if (isProduction) {
-  content = <Construccion />;
+  content = true;  // Si estamos en producción, content es true
 } else if (isLocalhost) {
-  content = <h1>Ready - Trabajando en Localhost</h1>;
+  content = false; // Si estamos en localhost, content es false
 } else {
-  content = <h1>Bienvenido a nuestra página en producción</h1>; // Esto es opcional
+  content = false; // Para otros entornos también mostrar la construcción
 }
 ---
 
@@ -31,6 +31,6 @@ if (isProduction) {
     <title>Optica Guinart</title>
   </head>
   <body>
-    {content} <!-- Aquí se renderiza el contenido basado en la lógica -->
+    {content ? <Construccion /> : <h1>Ready - Trabajando en Localhost</h1>}
   </body>
 </html>
