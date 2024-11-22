@@ -1,0 +1,43 @@
+---
+import Construccion from "../components/Construccion.astro";
+import Header from "../components/Header.astro";
+import "../styles/variables.scss"
+
+// Determinar si estamos en producción
+const isProduction = import.meta.env.MODE === "production";
+
+// Determinar si la URL es localhost
+const isLocalhost = new URL(Astro.request.url).hostname === "localhost";
+
+// Lógica condicional para determinar qué contenido mostrar
+let content;
+
+if (isProduction) {
+  content = true; // Si estamos en producción, content es true
+} else if (isLocalhost) {
+  content = false; // Si estamos en localhost, content es false
+} else {
+  content = false; // Para otros entornos también mostrar la construcción
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/common.scss">
+    <title>Optica Guinart</title>
+  </head>
+  <body>
+    {content ? <Construccion /> : 
+    <Header />
+    <slot />
+    }
+    <script src="../scripts/swiper.js"></script>
+  </body>
+</html>

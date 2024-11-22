@@ -1,0 +1,102 @@
+---
+import "swiper/swiper-bundle.css";
+---
+
+<section id="portada">
+  <div class="titol-principal">
+    <h1 class="e0">
+      <span>ÒPTICA</span>
+      <span>GUINART</span>
+    </h1>
+  </div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p class="promocio e2">
+          Duplica els teus progresius sense cost adicional!
+        </p>
+        <p class="promocio e2">Progresius d'alta gama</p>
+        <span class="numeros e1">2x1</span>
+      </div>
+      <div class="swiper-slide">
+        <p class="promocio e2">Sense compromisos!</p>
+        <p class="promocio e2">Primer mes de lents de contacte</p>
+        <p class="gratis e1">GRATIS</p>
+        <p class="e6">Lents de contacte diaries desde menys de 1€ al dia!</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="promocio e2">Montura</p>
+        <span class="promocio e4">+</span>
+        <p class="promocio e2">Lents antireflexants</p>
+        <span class="numeros e1">75€</span>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../styles/variables.scss";
+  #portada {
+    width: 100%;
+    height: calc(100dvh - 80px);
+    background-color: rgb(255, 225, 154);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .swiper {
+      width: 100%;
+      height: 100%;
+      .swiper-wrapper {
+        height: 100%;
+      }
+      .swiper-slide {
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        height: 100%;
+      }
+    }
+    .titol-principal {
+      height: 300px;
+      width: 100%;
+      position: relative;
+      color: white;
+      h1 {
+        span {
+          position: absolute;
+          transform: translate(-50%, -50%);
+
+          &:nth-child(1) {
+            left: calc(50% - 50px);
+            top: calc(50% - 30px);
+            @media screen and (min-width: variables.$tall1) {
+              top: calc(50% - 40px);
+            }
+            @media screen and (min-width: variables.$tall2) {
+              top: calc(50% - 50px);
+            }
+          }
+
+          &:nth-child(2) {
+            left: calc(50% + 50px);
+            top: calc(50% + 30px);
+            @media screen and (min-width: variables.$tall1) {
+              top: calc(50% + 40px);
+            }
+            @media screen and (min-width: variables.$tall2) {
+              top: calc(50% + 50px);
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
