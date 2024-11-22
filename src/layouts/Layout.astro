@@ -34,7 +34,7 @@ if (isProduction) {
     <title>Optica Guinart</title>
   </head>
   <body>
-    {content ? <Construccion /> : 
+    {!content ? <Construccion /> : 
     <Header />
     <slot />
     }
