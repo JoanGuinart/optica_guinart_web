@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 3500,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
+      enabled: true
     },
     freeMode: true,
     mousewheel: {
