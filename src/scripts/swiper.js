@@ -35,5 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollbar: {
       el: ".swiper-scrollbar",
     },
+    grabCursor: true,
   });
 });

@@ -1,0 +1,143 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Columna de Contacto -->
+    <div class="footer-contact">
+      <p>
+        <strong>📞 Teléfono:</strong>
+        <a href="tel:+34933118706" class="link">933 11 87 06</a>
+      </p>
+      <p>
+        <strong>💬 WhatsApp:</strong>
+        <a href="https://wa.me/34682502960" target="_blank" class="link"
+          >+34 682 50 29 60</a
+        >
+      </p>
+      <p>
+        <strong>📷 Instagram:</strong>
+        <a
+          href="https://www.instagram.com/optica_guinart/"
+          target="_blank"
+          class="link">@optica_guinart</a
+        >
+      </p>
+      <div class="footer-buttons">
+        <a href="tel:+34933118706" class="button call-button">Llamar Ahora</a>
+        <a
+          href="https://wa.me/34682502960"
+          target="_blank"
+          class="button whatsapp-button">WhatsApp</a
+        >
+        <a
+          href="https://www.instagram.com/optica_guinart/"
+          target="_blank"
+          class="button instagram-button">Instagram</a
+        >
+      </div>
+    </div>
+
+    <!-- Columna de Dirección -->
+    <div class="footer-location">
+      <a
+        href="https://www.google.es/maps/place/%C3%93ptica+Guinart/@41.4371189,2.1871034,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4bcdc240241cf:0xa4b5922d46c1e48d!8m2!3d41.4371149!4d2.1896783!16s%2Fg%2F11xd4ppr_?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+      >
+        <strong>📍 Dirección:</strong> Carrer Gran de Sant Andreu, 308, Sant Andreu,
+        08030 Barcelona
+      </a>
+      <div id="map" class="footer-map"></div>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 14px;
+    color: #333;
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 20px;
+
+      .footer-contact,
+      .footer-location {
+        flex: 1 1 300px; // Ajustable según necesidades
+        padding: 10px;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      .link {
+        color: #007acc;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .footer-buttons {
+        margin-top: 10px;
+
+        .button {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 5px;
+          color: #fff;
+
+          &.call-button {
+            background-color: #007acc;
+
+            &:hover {
+              background-color: #005f99;
+            }
+          }
+
+          &.whatsapp-button {
+            background-color: #25d366;
+
+            &:hover {
+              background-color: #1da851;
+            }
+          }
+
+          &.instagram-button {
+            background-color: #e1306c;
+
+            &:hover {
+              background-color: #c1275f;
+            }
+          }
+        }
+      }
+
+      .footer-location {
+        .footer-map {
+          margin-top: 10px;
+          width: 100%;
+          height: 200px;
+          border: 1px solid #8d8d8d;
+          border-radius: 5px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+</style>

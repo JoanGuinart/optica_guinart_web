@@ -121,3 +121,27 @@ body {
     font-size: 24px;
   }
 }
+
+.leaflet-bottom.leaflet-right,
+.leaflet-top.leaflet-left {
+  display: none;
+}
+.leaflet-popup-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leaflet-popup-tip{
+  display: none;
+}
+.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
+  width: 27px;
+  height: 43px;
+}
+.link-google-optica{
+  text-decoration: none;
+  color: black !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
