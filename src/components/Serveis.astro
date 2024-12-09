@@ -1,0 +1,92 @@
+---
+
+---
+
+<style lang="scss">
+    .serveis {
+      background-color: #f4f4f4;
+      padding: 3rem 1rem;
+      text-align: center;
+  
+      &__title {
+        font-size: 2.5rem;
+        color: #004080;
+        margin-bottom: 0.5rem;
+      }
+  
+      &__description {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+  
+        .card {
+          background-color: #fff;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem;
+          text-align: center;
+          transition: transform 0.3s, box-shadow 0.3s;
+  
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+  
+          img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+          }
+  
+          h3 {
+            font-size: 1.5rem;
+            color: #004080;
+            margin-bottom: 0.5rem;
+          }
+  
+          p {
+            font-size: 1rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  </style>
+  
+  <section class="serveis">
+    <h2 class="serveis__title">Els nostres serveis</h2>
+    <p class="serveis__description">
+      Oferim una àmplia gamma de serveis per garantir la salut visual i auditiva dels nostres clients.
+    </p>
+  
+    <div class="serveis__cards">
+      <div class="card">
+        <img src="/images/optometria-icon.svg" alt="Icona d'optometria" />
+        <h3>Optometria</h3>
+        <p>Graduació visual per assegurar una visió clara i precisa.</p>
+      </div>
+  
+      <div class="card">
+        <img src="/images/tensio-ocular-icon.svg" alt="Icona de tensió ocular" />
+        <h3>Tensió Ocular i Audiologia</h3>
+        <p>Mesura de la tensió ocular i serveis d’audiologia avançada.</p>
+      </div>
+  
+      <div class="card">
+        <img src="/images/lentologia-icon.svg" alt="Icona de lentologia" />
+        <h3>Lentologia</h3>
+        <p>Adaptació personalitzada de lents de contacte per a totes les edats.</p>
+      </div>
+    </div>
+  </section>
+  
