@@ -3,6 +3,8 @@
 ---
 
 <style lang="scss">
+  @use "../styles/variables.scss";
+
   .serveis {
     background-color: #f4f4f4;
     padding: 3rem 1rem;
@@ -10,13 +12,13 @@
 
     &__title {
       font-size: 2.5rem;
-      color: #004080;
+      color: variables.$carbo-fosc;
       margin-bottom: 0.5rem;
     }
 
     &__description {
       font-size: 1.2rem;
-      color: #555;
+      color: variables.$carbo-clar;
       margin-bottom: 2rem;
       max-width: 600px;
       margin-left: auto;
@@ -30,7 +32,7 @@
       margin-top: 2rem;
 
       .card {
-        background-color: #fff;
+        background-color: variables.$gris;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 1.5rem;
@@ -45,14 +47,17 @@
         }
 
         img {
-          width: 60px;
-          height: 60px;
+          width: 100%;
+          max-width: 400px;
+          height: auto;
           margin-bottom: 1rem;
+          mix-blend-mode: multiply;
+          border-radius: 4px;
         }
 
         h3 {
           font-size: 1.5rem;
-          color: #004080;
+          color: variables.$carbo-fosc;
           margin-bottom: 0.5rem;
         }
 
@@ -74,19 +79,19 @@
 
   <div class="serveis__cards">
     <div class="card">
-      <img src="/images/optometria-icon.svg" alt="Icona d'optometria" />
+      <img src="/img/optometria.webp" alt="Icona d'optometria" />
       <h3>Optometria</h3>
       <p>Graduació visual per assegurar una visió clara i precisa.</p>
     </div>
 
     <div class="card">
-      <img src="/images/tensio-ocular-icon.svg" alt="Icona de tensió ocular" />
+      <img src="/img/tensio-ocular.webp" alt="Icona de tensió ocular" />
       <h3>Tensió Ocular i Audiologia</h3>
       <p>Mesura de la tensió ocular i serveis d’audiologia avançada.</p>
     </div>
 
     <div class="card">
-      <img src="/images/lentologia-icon.svg" alt="Icona de lentologia" />
+      <img src="/img/lentologia.webp" alt="Icona de lentologia" />
       <h3>Lentologia</h3>
       <p>
         Adaptació personalitzada de lents de contacte per a totes les edats.

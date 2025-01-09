@@ -50,7 +50,7 @@ import "swiper/swiper-bundle.css";
   #portada {
     width: 100%;
     height: 100dvh;
-    background-color: rgb(255, 225, 154);
+    background-color: variables.$crema-clar;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,10 +62,9 @@ import "swiper/swiper-bundle.css";
       }
       .swiper-slide {
         background: linear-gradient(
-          to right,
-          variables.$groc,
-          variables.$grocClar,
-          variables.$groc
+          to bottom,
+          variables.$crema-clar,
+          variables.$daurat-clar
         );
         display: flex;
         flex-direction: column;
@@ -75,6 +74,7 @@ import "swiper/swiper-bundle.css";
         height: 100%;
         p {
           @extend .columnat;
+          color: variables.$carbo-fosc;
           &.e6 {
             margin-top: 20px;
           }
@@ -86,7 +86,7 @@ import "swiper/swiper-bundle.css";
       max-height: 323px;
       width: 100%;
       position: relative;
-      color: variables.$blanc;
+      color: variables.$carbo-fosc;
       overflow-x: hidden;
       h1 {
         span {

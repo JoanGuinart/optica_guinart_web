@@ -1,16 +1,16 @@
 <section id="promosEspecials">
   <div class="columnat">
     <div class="promo">
-      <div class="front">Promoció 1</div>
-      <div class="back">Detalls de la Promoció 1</div>
+      <div class="front">Descompte en montures de marca</div>
+      <div class="back">15% descompte  en montures de marca</div>
     </div>
     <div class="promo">
-      <div class="front">Promoció 2</div>
-      <div class="back">Detalls de la Promoció 2</div>
+      <div class="front">Descompte en audiòfons</div>
+      <div class="back">40% descompte audiófons recargables</div>
     </div>
     <div class="promo">
-      <div class="front">Promoció 3</div>
-      <div class="back">Detalls de la Promoció 3</div>
+      <div class="front">Descompte de ray-ban</div>
+      <div class="back">40% descompte ray-ban graduada progressiva</div>
     </div>
   </div>
 </section>
@@ -19,9 +19,8 @@
   @use "../styles/variables.scss";
 
   #promosEspecials {
-    background-color: variables.$rosa;
+    background-color: variables.$gris;
     padding: 40px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
 
@@ -57,18 +56,22 @@
           align-items: center;
           font-size: 1.2rem;
           font-weight: bold;
-          color: variables.$blanc;
           transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
         }
-
+        
         .front {
-          background-color: variables.$turquesa;
+          color: variables.$carbo-fosc;
+          background-color: variables.$beix;
           transform: rotateX(0deg);
+          font-family: 'Playfair display', serif;
+          text-transform: uppercase;
         }
-
+        
         .back {
-          background-color: variables.$turquesa;
+          color: variables.$blanc;
+          background-color: variables.$daurat-fosc;
           transform: rotateX(-180deg);
+          font-family: 'Montserrat', serif;
         }
       }
 

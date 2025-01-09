@@ -50,8 +50,10 @@
 </footer>
 
 <style lang="scss">
+  @use "../styles/variables.scss";
+
   .footer {
-    background-color: #f4f4f4;
+    background-color: variables.$gris;
     padding: 20px;
     font-size: 14px;
     color: #333;
@@ -67,7 +69,7 @@
 
       .footer-contact,
       .footer-location {
-        flex: 1 1 300px; // Ajustable según necesidades
+        flex: 1 1 300px; 
         padding: 10px;
       }
 
@@ -105,7 +107,7 @@
           }
 
           &.whatsapp-button {
-            background-color: #25d366;
+            background-color: variables.$whatsapp;
 
             &:hover {
               background-color: #1da851;
@@ -113,7 +115,7 @@
           }
 
           &.instagram-button {
-            background-color: #e1306c;
+            background-color: variables.$instagram;
 
             &:hover {
               background-color: #c1275f;
