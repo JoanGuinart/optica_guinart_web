@@ -44,6 +44,7 @@
         &:hover {
           transform: translateY(-5px);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
         }
 
         img {
@@ -67,6 +68,38 @@
         }
       }
     }
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup.hidden {
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
   }
 </style>
 
@@ -92,10 +125,64 @@
 
     <div class="card">
       <img src="/img/lentologia.webp" alt="Icona de lentologia" />
-      <h3>Lentologia</h3>
+      <h3>Contactotologia</h3>
       <p>
         Adaptació personalitzada de lents de contacte per a totes les edats.
       </p>
     </div>
   </div>
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="popup-close" class="popup-close">&times;</span>
+      <div id="popup-info"></div>
+    </div>
+  </div>
 </section>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+  const popup = document.getElementById("popup");
+  const popupClose = document.getElementById("popup-close");
+  const popupInfo = document.getElementById("popup-info");
+
+  const cardContent = {
+    1: {
+      title: "Title for Card 1",
+      image: "https://via.placeholder.com/150",
+      text: "This is the description for Card 1.",
+    },
+    2: {
+      title: "Title for Card 2",
+      image: "https://via.placeholder.com/150",
+      text: "This is the description for Card 2.",
+    },
+    3: {
+      title: "Title for Card 3",
+      image: "https://via.placeholder.com/150",
+      text: "This is the description for Card 3.",
+    },
+  };
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      const content = cardContent[index + 1];
+
+      popupInfo.innerHTML = `
+      <h2>${content.title}</h2>
+      <img src="${content.image}" alt="${content.title}">
+      <p>${content.text}</p>
+    `;
+
+      popup.classList.remove("hidden");
+    });
+  });
+
+  popupClose.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.classList.add("hidden");
+    }
+  });
+</script>
