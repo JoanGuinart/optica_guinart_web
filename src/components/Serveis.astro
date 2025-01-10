@@ -2,6 +2,51 @@
 
 ---
 
+<section class="serveis">
+  <h2 class="serveis__title">Els nostres serveis</h2>
+  <p class="serveis__description">
+    Oferim una àmplia gamma de serveis per garantir la salut visual i auditiva
+    dels nostres clients.
+  </p>
+
+  <div class="serveis__cards">
+    <div class="card">
+      <img src="/img/optometria.webp" alt="Icona d'optometria" />
+      <h3>Optometria</h3>
+      <p>Graduació visual per assegurar una visió clara i precisa.</p>
+      <p>Llegir més...</p>
+      <div class="extra-info">
+        <span class="close">×</span>
+        <p>Información adicional sobre optometría...</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/tensio-ocular.webp" alt="Icona de tensió ocular" />
+      <h3>Tensió Ocular i Audiologia</h3>
+      <p>Mesura de la tensió ocular i serveis d’audiologia avançada.</p>
+      <p>Llegir més...</p>
+      <div class="extra-info">
+        <span class="close">×</span>
+        <p>Información adicional sobre tensión ocular...</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/lentologia.webp" alt="Icona de lentologia" />
+      <h3>Contactotologia</h3>
+      <p>
+        Adaptació personalitzada de lents de contacte per a totes les edats.
+      </p>
+      <p>Llegir més...</p>
+      <div class="extra-info">
+        <span class="close">×</span>
+        <p>Información adicional sobre lentología...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <style lang="scss">
   @use "../styles/variables.scss";
 
@@ -40,7 +85,13 @@
         transition:
           transform 0.3s,
           box-shadow 0.3s;
-
+        position: relative;
+        overflow: hidden;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         &:hover {
           transform: translateY(-5px);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -62,127 +113,72 @@
           margin-bottom: 0.5rem;
         }
 
-        p {
+        p:first-of-type {
           font-size: 1rem;
           color: #666;
+        }
+        p:last-of-type {
+          font-size: 0.8rem;
+          color: variables.$carbo-fosc;
+          font-weight: bold;
+          text-decoration: underline;
         }
       }
     }
   }
 
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .extra-info {
+    display: block;
+    max-height: 0;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .popup.hidden {
-    display: none;
-  }
-
-  .popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-  }
-
-  .popup-close {
+    overflow: hidden;
+    padding: 0 20px;
+    background-color: variables.$crema-fosc;
+    margin-top: 10px;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    transition:
+      max-height 0.3s ease,
+      height 0.3s ease,
+      padding 0.3s ease;
+
+    &.open {
+      max-height: 500px; 
+      padding: 20px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: red;
+    }
   }
 </style>
 
-<section class="serveis">
-  <h2 class="serveis__title">Els nostres serveis</h2>
-  <p class="serveis__description">
-    Oferim una àmplia gamma de serveis per garantir la salut visual i auditiva
-    dels nostres clients.
-  </p>
-
-  <div class="serveis__cards">
-    <div class="card">
-      <img src="/img/optometria.webp" alt="Icona d'optometria" />
-      <h3>Optometria</h3>
-      <p>Graduació visual per assegurar una visió clara i precisa.</p>
-    </div>
-
-    <div class="card">
-      <img src="/img/tensio-ocular.webp" alt="Icona de tensió ocular" />
-      <h3>Tensió Ocular i Audiologia</h3>
-      <p>Mesura de la tensió ocular i serveis d’audiologia avançada.</p>
-    </div>
-
-    <div class="card">
-      <img src="/img/lentologia.webp" alt="Icona de lentologia" />
-      <h3>Contactotologia</h3>
-      <p>
-        Adaptació personalitzada de lents de contacte per a totes les edats.
-      </p>
-    </div>
-  </div>
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span id="popup-close" class="popup-close">&times;</span>
-      <div id="popup-info"></div>
-    </div>
-  </div>
-</section>
-
 <script>
-  const cards = document.querySelectorAll(".card");
-  const popup = document.getElementById("popup");
-  const popupClose = document.getElementById("popup-close");
-  const popupInfo = document.getElementById("popup-info");
-
-  const cardContent = {
-    1: {
-      title: "Title for Card 1",
-      image: "https://via.placeholder.com/150",
-      text: "This is the description for Card 1.",
-    },
-    2: {
-      title: "Title for Card 2",
-      image: "https://via.placeholder.com/150",
-      text: "This is the description for Card 2.",
-    },
-    3: {
-      title: "Title for Card 3",
-      image: "https://via.placeholder.com/150",
-      text: "This is the description for Card 3.",
-    },
-  };
-  cards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-      const content = cardContent[index + 1];
-
-      popupInfo.innerHTML = `
-      <h2>${content.title}</h2>
-      <img src="${content.image}" alt="${content.title}">
-      <p>${content.text}</p>
-    `;
-
-      popup.classList.remove("hidden");
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", function () {
+      const extraInfo = this.querySelector(".extra-info");
+      extraInfo.classList.toggle("open");
     });
   });
 
-  popupClose.addEventListener("click", () => {
-    popup.classList.add("hidden");
-  });
-
-  popup.addEventListener("click", (event) => {
-    if (event.target === popup) {
-      popup.classList.add("hidden");
-    }
+  document.querySelectorAll(".close").forEach((closeBtn) => {
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const extraInfo = this.closest(".card").querySelector(".extra-info");
+      extraInfo.classList.remove("open");
+    });
   });
 </script>

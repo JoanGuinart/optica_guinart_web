@@ -11,14 +11,14 @@ const isProduction = import.meta.env.MODE === "production";
 const isLocalhost = new URL(Astro.request.url).hostname === "localhost";
 
 // Lógica condicional para determinar qué contenido mostrar
-let content;
+let contingut;
 
 if (isProduction) {
-  content = true; // Si estamos en producción, content es true
+  contingut = true; // Si estamos en producción, contingut es true
 } else if (isLocalhost) {
-  content = false; // Si estamos en localhost, content es false
+  contingut = false; // Si estamos en localhost, contingut es false
 } else {
-  content = false; // Para otros entornos también mostrar la construcción
+  contingut = false; // Para otros entornos también mostrar la construcción
 }
 ---
 
@@ -38,7 +38,7 @@ if (isProduction) {
     <title>Optica Guinart</title>
   </head>
   <body>
-    {content ? <Construccion /> : 
+    {!contingut ? <Construccion /> : 
     <slot />
     <Footer/>
     }

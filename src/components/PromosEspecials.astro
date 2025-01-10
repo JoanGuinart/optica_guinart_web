@@ -4,7 +4,6 @@
       <div class="front">
         <p>Promoció</p>
         <p>Montures de marca</p>
-        <figcaption>Click aqui</figcaption>
       </div>
       <div class="back">
         <p>15%</p>
@@ -16,7 +15,6 @@
       <div class="front">
         <p>Promoció</p>
         <p>Audiòfons</p>
-        <figcaption>Click aqui</figcaption>
       </div>
       <div class="back">
         <p>40%</p>
@@ -29,7 +27,6 @@
       <div class="front">
         <p>Promoció</p>
         <p>Ray-Ban</p>
-        <figcaption>Click aqui</figcaption>
       </div>
       <div class="back">
         <p>40%</p>
@@ -45,27 +42,33 @@
 
   #promosEspecials {
     background-color: variables.$gris;
-    padding: 40px;
+    padding-block: 40px;
     display: flex;
     justify-content: center;
-
+    overflow-x: hidden;
     .columnat {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: center;
+      justify-content: space-between;
 
       .promo {
         flex: 1 1 calc(33.333% - 20px);
         max-width: calc(33.333% - 20px);
         height: 400px;
         perspective: 1000px;
-        cursor: pointer;
-
+/* 
         &:hover .front {
           transform: rotateX(180deg);
         }
         &:hover .back {
+          transform: rotateX(0deg);
+        } */
+
+        &.rotated .front {
+          transform: rotateX(180deg);
+        }
+        &.rotated .back {
           transform: rotateX(0deg);
         }
 
@@ -96,21 +99,13 @@
           font-family: "montserrat", sans-serif;
           text-transform: uppercase;
           height: 100%;
+          min-width: 280px;
           text-align: center;
           p:first-child {
             font-size: clamp(40px, 3vw, 60px);
           }
           p:nth-child(2) {
             font-size: clamp(20px, 2vw, 35px);
-          }
-          figcaption {
-            display: block;
-            position: absolute;
-            bottom: 40px;
-            font-size: 16px;
-            @media screen and (min-width: variables.$tall2) {
-              display: none;
-            }
           }
         }
 
@@ -129,7 +124,7 @@
           p:first-child {
             font-size: clamp(50px, 5vw, 100px);
           }
-          span{
+          span {
             font-size: 10px;
             margin-top: -30px;
             font-style: italic;
@@ -163,3 +158,34 @@
     }
   }
 </style>
+
+<script>
+  function createObserver() {
+    const promos = document.querySelectorAll(".promo");
+
+    // Configuración del IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("rotated"); 
+          } else {
+            entry.target.classList.remove("rotated"); 
+          }
+        });
+      },
+      {
+        threshold: 1.0, 
+        rootMargin: "0px 0px -150px 0px"
+      }
+    );
+
+    // Observar todas las tarjetas
+    promos.forEach((promo) => {
+      observer.observe(promo);
+    });
+  }
+
+  // Llamar a la función para crear el observer
+  document.addEventListener("DOMContentLoaded", createObserver);
+</script>
