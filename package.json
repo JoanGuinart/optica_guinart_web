@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.4",
+    "@emailjs/browser": "^4.4.1",
+    "astro": "^5.1.10",
     "leaflet": "^1.9.4",
     "sass": "^1.81.0",
     "swiper": "^11.1.15"

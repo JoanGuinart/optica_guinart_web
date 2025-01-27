@@ -1,0 +1,404 @@
+---
+
+---
+
+<div class="cita-previa">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <form class="appointment-form" id="appointmentForm">
+    <div class="form-header">
+      <h2>Demana una cita</h2>
+      <p>Let's discuss your project together</p>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nom complet</label>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          placeholder="Escriu el teu nom complet"
+        />
+      </div>
+      <div class="error-message" id="nameError">
+        Siusplau, introdueix un nom vàlid
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="Escriu el teu email"
+        />
+      </div>
+      <div class="error-message" id="emailError">
+        Siusplau, introdueix un email vàlid
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Telèfon</label>
+      <div class="input-group">
+        <i class="fas fa-phone"></i>
+        <input
+          type="tel"
+          id="phone"
+          class="form-control"
+          placeholder="Escriu el teu número de telèfon"
+        />
+      </div>
+      <div class="error-message" id="phoneError">
+        Siusplau, introdueix un telèfon vàlid
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Data Preferida:</label>
+      <div class="input-group">
+        <i class="fas fa-calendar"></i>
+        <input type="date" id="date" class="form-control" min="" />
+      </div>
+      <div class="error-message" id="dateError">
+        Siusplau, introdueix una data vàlida
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Hora:</label>
+      <div class="time-slots" id="timeSlots">
+        <div class="time-slot" data-time="09:00">9:00</div>
+        <div class="time-slot" data-time="10:00">10:00</div>
+        <div class="time-slot" data-time="11:00">11:00</div>
+        <div class="time-slot" data-time="12:00">12:00</div>
+        <div class="time-slot" data-time="13:00">13:00</div>
+        <div class="time-slot" data-time="17:00">17:00</div>
+        <div class="time-slot" data-time="18:00">18:00</div>
+        <div class="time-slot" data-time="19:00">19:00</div>
+        <div class="time-slot" data-time="20:00">20:00</div>
+      </div>
+      <div class="error-message" id="timeError">
+        Siusplau, seleccioneu una hora vàlida
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Explicans que necessites</label>
+      <cite
+        >(Revisió ocular, revisió auditiva, presió ocular, consulta sobre algun
+        producte, informació sobre, etc...)</cite
+      >
+      <div class="input-group margin-top">
+        <i class="fas fa-comment"></i>
+        <textarea
+          id="message"
+          class="form-control"
+          placeholder="M'agradaria graduarme la vista, m'agradaria saber més sobre les ulleres de sol, etc..."
+          rows="6"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="acceptance" class="checkbox-label">
+        <input type="checkbox" id="acceptance" required />
+        Enviar aquest formulari implica acceptar que les meves dades personals seran
+        utilitzades exclusivament per a la confirmació i gestió de la meva cita.
+        <br />
+        <small
+          >Les meves dades no seran compartides amb tercers ni utilitzades per a
+          altres finalitats. Entenc que puc exercir els meus drets d'accés,
+          rectificació, cancel·lació i oposició segons el que estableix la
+          legislació vigent en matèria de protecció de dades.</small
+        >
+      </label>
+    </div>
+
+    <button type="submit" class="submit-btn">Confirmar Cita</button>
+
+    <div class="success-message" id="successMessage">
+      La teva cita ha estat enviada a Optica Guinart. Ens posarem en contacte
+      amb tu lo mes breu possible per confirmar la cita, gràcies!
+    </div>
+  </form>
+</div>
+
+<style>
+  .cita-previa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 24px;
+  }
+  .appointment-form {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .form-header h2 {
+    color: #1e3c72;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .form-header p {
+    color: #666;
+    font-size: 1.1em;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e3c72;
+    font-weight: 500;
+  }
+
+  .input-group {
+    position: relative;
+  }
+  .margin-top {
+    margin-top: 10px;
+  }
+
+  .input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1e3c72;
+  }
+
+  .form-control {
+    width: 80%;
+    padding: 12px 15px 12px 45px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .form-control:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 10px rgba(30, 60, 114, 0.2);
+    outline: none;
+  }
+
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .form-control.error {
+    border-color: #e74c3c;
+  }
+
+  .form-control.success {
+    border-color: #2ecc71;
+  }
+
+  .time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .time-slot {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .time-slot:hover {
+    background: rgba(30, 60, 114, 0.1);
+  }
+
+  .time-slot.selected {
+    background: #1e3c72;
+    color: white;
+    border-color: #1e3c72;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .submit-btn:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+  }
+
+  .success-message {
+    display: none;
+    text-align: center;
+    color: #2ecc71;
+    margin-top: 20px;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(46, 204, 113, 0.1);
+  }
+  cite {
+    font-size: 14px;
+    color: #acacac;
+    margin-bottom: 10px;
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+  }
+
+  .shake {
+    animation: shake 0.4s ease-in-out;
+  }
+
+  @media (max-width: 480px) {
+    .appointment-form {
+      padding: 20px;
+    }
+
+    .form-header h2 {
+      font-size: 1.5em;
+    }
+
+    .time-slots {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<script>
+  import emailjs from "@emailjs/browser";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("script arrancat");
+    const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    console.log(serviceId, templateId, publicKey);
+
+    emailjs.init(publicKey);
+
+    const today = new Date().toISOString().split("T")[0];
+    (document.getElementById("date") as HTMLInputElement).min = today;
+
+    const form = document.getElementById("appointmentForm") as HTMLFormElement;
+    const nameInput = document.getElementById("name") as HTMLInputElement;
+    const emailInput = document.getElementById("email") as HTMLInputElement;
+    const phoneInput = document.getElementById("phone") as HTMLInputElement;
+    const dateInput = document.getElementById("date") as HTMLInputElement;
+    const timeSlots = document.querySelectorAll(".time-slot");
+    const acceptanceCheckbox = document.getElementById("acceptance");
+    const successMessage = document.getElementById("successMessage");
+
+    let selectedTime = null;
+
+    // Selecció d'hora
+    timeSlots.forEach((slot) => {
+      slot.addEventListener("click", () => {
+        timeSlots.forEach((s) => s.classList.remove("selected"));
+        slot.classList.add("selected");
+        selectedTime = (slot as HTMLElement).dataset.time;
+      });
+    });
+
+    // Enviament del formulari
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const date = dateInput.value.trim();
+      const message = (
+        document.getElementById("message") as HTMLTextAreaElement
+      ).value.trim();
+
+      if (
+        !name ||
+        !email ||
+        !phone ||
+        !date ||
+        !acceptanceCheckbox ||
+        !selectedTime
+      ) {
+        alert("Per favor, completa tots els camps.");
+        return;
+      }
+
+      // Enviar el correu amb EmailJS
+      emailjs
+        .send(serviceId, templateId, {
+          user_name: name,
+          user_email: email,
+          user_phone: phone,
+          appointment_date: date,
+          appointment_time: selectedTime,
+          message: message || "Sense missatge addicional.",
+        })
+        .then((response) => {
+          successMessage.style.display = "block";
+          setTimeout(() => {
+            successMessage.style.display = "none";
+          }, 8000);
+          form.reset();
+          timeSlots.forEach((slot) => slot.classList.remove("selected"));
+        })
+        .catch((error) => {
+          console.error("Error en enviar el correu:", error);
+          alert(
+            "Hi ha hagut un problema al enviar la teva cita. Torna-ho a intentar."
+          );
+        });
+    });
+  });
+</script>
