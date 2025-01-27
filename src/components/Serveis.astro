@@ -14,10 +14,20 @@
       <img src="/img/optometria.webp" alt="Icona d'optometria" />
       <h3>Optometria</h3>
       <p>Graduació visual per assegurar una visió clara i precisa.</p>
-      <p>Llegir més...</p>
+      <p class="llegir-mes">Llegir més...</p>
       <div class="extra-info">
         <span class="close">×</span>
-        <p>Información adicional sobre optometría...</p>
+        <h2 class="e4">Optometria i Revisió de la Vista Ocular</h2>
+        <p class="e6">
+          Realitzem revisions oculars amb les màquines més avançades, utilitzant
+          sensors òptics de última generació per un diagnòstic precís i ràpid.
+        </p>
+        <ul class="e5">
+          <li>Revisió de la visió binocular</li>
+          <li>Mesura de la refracció per a ulleres o lents de contacte</li>
+          <li>Anàlisi de la salut ocular</li>
+        </ul>
+        <cite class="e6">La teva salut ocular, la nostra prioritat.</cite>
       </div>
     </div>
 
@@ -25,10 +35,23 @@
       <img src="/img/tensio-ocular.webp" alt="Icona de tensió ocular" />
       <h3>Tensió Ocular i Audiologia</h3>
       <p>Mesura de la tensió ocular i serveis d’audiologia avançada.</p>
-      <p>Llegir més...</p>
+      <p class="llegir-mes">Llegir més...</p>
       <div class="extra-info">
         <span class="close">×</span>
-        <p>Información adicional sobre tensión ocular...</p>
+        <h2 class="e4">Tensió Ocular i Audiologia</h2>
+        <p class="e6">
+          Mesurem la teva tensió ocular amb tecnologia avançada i oferim
+          revisions auditives en una cabina insonoritzada per a un diagnòstic
+          perfecte.
+        </p>
+        <ul class="e5">
+          <li>Mesura de la tensió ocular</li>
+          <li>Proves auditives detallades</li>
+          <li>Revisió de l'oïda i assessorament</li>
+        </ul>
+        <cite class="e6"
+          >Els nostres serveis per al teu benestar visual i auditiu.</cite
+        >
       </div>
     </div>
 
@@ -38,10 +61,21 @@
       <p>
         Adaptació personalitzada de lents de contacte per a totes les edats.
       </p>
-      <p>Llegir més...</p>
+      <p class="llegir-mes">Llegir més...</p>
       <div class="extra-info">
         <span class="close">×</span>
-        <p>Información adicional sobre lentología...</p>
+        <h2 class="e4">Lents de Contacte</h2>
+        <p class="e6">
+          Especialitzats en lents de gel hydrogel i cosmètiques per a una
+          comoditat superior i estètica personalitzada.
+        </p>
+        <ul class="e5">
+          <li>Lents de gel hydrogel per a màxima comoditat</li>
+          <li>Lents cosmètiques per canviar el color dels teus ulls</li>
+          <li>Lents d'ús diari, setmanal i mensual</li>
+        </ul>
+        <cite class="e6">La millor solució per a la teva visió i estètica.</cite
+        >
       </div>
     </div>
   </div>
@@ -117,7 +151,7 @@
           font-size: 1rem;
           color: #666;
         }
-        p:last-of-type {
+        .llegir-mes {
           font-size: 0.8rem;
           color: variables.$carbo-fosc;
           font-weight: bold;
@@ -141,13 +175,14 @@
     right: 0;
     border-radius: 8px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    color: #666;
     transition:
       max-height 0.3s ease,
       height 0.3s ease,
       padding 0.3s ease;
 
     &.open {
-      max-height: 500px; 
+      max-height: 500px;
       padding: 20px;
     }
 
@@ -162,6 +197,21 @@
 
     .close:hover {
       color: red;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-block: 20px;
+    }
+    cite {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    ul li {
+      margin-block: 10px;
     }
   }
 </style>
