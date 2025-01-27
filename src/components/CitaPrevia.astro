@@ -323,8 +323,9 @@
     const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
-
-    console.log(serviceId, templateId, publicKey);
+    console.log("serviceId:", serviceId);
+    console.log("templateId:", templateId);
+    console.log("publicKey:", publicKey);
 
     emailjs.init(publicKey);
 

@@ -3,8 +3,6 @@ import "leaflet/dist/leaflet.css";
 
 const mapa = document.querySelector("#map");
 
-console.log(mapa);
-
 const map = L.map(mapa).setView([41.4371109, 2.1896885], 16);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(map);
